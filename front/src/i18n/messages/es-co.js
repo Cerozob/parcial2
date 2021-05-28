@@ -16,7 +16,7 @@ export default {
 		myRooms: "Mis habitaciones",
 		stats: "Estadísticas",
 		noHomes: "No hay hogares disponibles",
-		lofticon: "Ícono de habitación",
+		lofticon: "Ícono de apartamento",
 		homeicon: "Ícono de casa",
 	},
 };
