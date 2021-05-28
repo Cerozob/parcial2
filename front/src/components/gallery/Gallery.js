@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Gallery.scss";
 import { Card } from "../card/Card";
 import { FormattedMessage } from "react-intl";
-import { json } from "express";
 
 export const Gallery = () => {
 	const [state, setState] = useState({ homes: [] });
@@ -12,12 +11,15 @@ export const Gallery = () => {
 			if (localStorage.getItem("homes") === null) setState({ homes: [] });
 			else setState({ homes: localStorage.getItem("homes") });
 		}
-		let endpoint = "http://localhost:3000/api/homes";
-		fetch(endpoint)
+		let endpoint = "http://localhost:3001/api/homes";
+		fetch(endpoint, {
+			mode: "no-cors",
+		})
 			.then((res) => {
 				return res.json();
 			})
 			.then((phomes) => {
+				console.log(phomes);
 				setState({ homes: phomes });
 				localStorage.setItem("homes", phomes);
 			});
@@ -27,7 +29,9 @@ export const Gallery = () => {
 			{state.homes == null ? (
 				<FormattedMessage id="noHomes"></FormattedMessage>
 			) : (
-				<p>{JSON.stringify(state.homes[0])}</p>
+				state.homes
+					.filter((home) => home.isActive)
+					.map((home) => <Card key={home.id} home={home}></Card>)
 			)}
 		</div>
 	);

@@ -15,5 +15,7 @@ export default {
 		myRooms: "My rooms",
 		stats: "Stats",
 		noHomes: "There are no homes available",
+		lofticon: "Icon loft",
+		homeicon: "Icon house",
 	},
 };
