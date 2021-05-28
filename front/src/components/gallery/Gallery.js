@@ -12,9 +12,7 @@ export const Gallery = () => {
 			else setState({ homes: localStorage.getItem("homes") });
 		}
 		let endpoint = "http://localhost:3001/api/homes";
-		fetch(endpoint, {
-			mode: "no-cors",
-		})
+		fetch(endpoint)
 			.then((res) => {
 				return res.json();
 			})
