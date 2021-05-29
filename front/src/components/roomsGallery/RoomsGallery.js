@@ -9,7 +9,7 @@ export const RoomsGallery = (props) => {
 	};
 
 	return (
-		<div className="Gallery">
+		<div className="Gallery col-lg-8 md-12 sm-12">
 			{props.rooms == null ? (
 				<FormattedMessage id="noRooms"></FormattedMessage>
 			) : (

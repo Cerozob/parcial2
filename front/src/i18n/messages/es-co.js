@@ -24,5 +24,8 @@ export default {
 		roomicon: "Ícono de habitación",
 		kitchenicon: "Ícono de cocina",
 		noRooms: "No hay habitaciones disponibles",
+		noRoomSelected: "No se ha seleccionado ninguna habitación",
+		device: "Dispositivo",
+		value: "Valor",
 	},
 };

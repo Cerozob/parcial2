@@ -23,5 +23,8 @@ export default {
 		roomicon: "Room icon",
 		kitchenicon: "Kitchen icon",
 		noRooms: "No rooms found",
+		noRoomSelected: "No room selected",
+		device: "Device",
+		value: "Value",
 	},
 };

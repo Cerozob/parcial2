@@ -3,10 +3,12 @@ import "./HomeDetail.scss";
 import { FormattedMessage } from "react-intl";
 import { useParams } from "react-router";
 import { RoomsGallery } from "../../components/roomsGallery/RoomsGallery";
+import { RoomDetail } from "../../components/roomDetail/RoomDetail";
 
 export const HomeDetail = () => {
 	let { id } = useParams();
 	const [state, setState] = useState({ home: [] });
+	const [roomState, setRoom] = useState({ room: [] });
 	useEffect(() => {
 		if (!navigator.onLine) {
 			if (localStorage.getItem(`${id}`) === null) setState({ home: [] });
@@ -25,18 +27,30 @@ export const HomeDetail = () => {
 	}, [id]);
 
 	const setCurrentRoom = (roomid) => {
-		let room = state.home.rooms.filter((room) => room._id === roomid);
-		console.log(room);
+		let selectedRoom = state.home.rooms.filter((room) => room._id === roomid);
+		setRoom({ room: selectedRoom });
 	};
+
 	return (
 		<div className="container home">
 			<h1>
 				<FormattedMessage id="myrooms"></FormattedMessage>
 			</h1>
-			<RoomsGallery
-				rooms={state.home.rooms}
-				clickRoom={setCurrentRoom}
-			></RoomsGallery>
+			<div className="row">
+				<RoomsGallery
+					rooms={state.home.rooms}
+					clickRoom={setCurrentRoom}
+				></RoomsGallery>
+				<RoomDetail
+					room={
+						roomState.room == null
+							? null
+							: roomState.room.length === 0
+							? null
+							: roomState.room
+					}
+				></RoomDetail>
+			</div>
 		</div>
 	);
 };
