@@ -18,5 +18,11 @@ export default {
 		noHomes: "No hay hogares disponibles",
 		lofticon: "Ícono de apartamento",
 		homeicon: "Ícono de casa",
+		spanish: "Español",
+		english: "Inglés",
+		myrooms: "Mis habitaciones",
+		roomicon: "Ícono de habitación",
+		kitchenicon: "Ícono de cocina",
+		noRooms: "No hay habitaciones disponibles",
 	},
 };

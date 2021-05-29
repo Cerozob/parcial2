@@ -1,0 +1,20 @@
+.room-card-home {
+	display: flex;
+	justify-content: space-between;
+	width: 13rem;
+	min-height: 12rem;
+	padding: 0.7rem;
+	margin-top: 0.625rem;
+	&:not(:first-child) {
+		margin-left: 0.625rem;
+	}
+	&-img {
+		&-link {
+			text-align: center;
+		}
+		&-top {
+			height: 10rem;
+			width: 10rem !important;
+		}
+	}
+}
