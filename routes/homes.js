@@ -5,7 +5,7 @@ var [getHomes, getHomeById] = require("../controllers/home");
 var cors = require("cors");
 
 var corsOptions = {
-	origin: false,
+	origin: "*",
 	methods: "GET",
 	optionsSuccessStatus: 204,
 };

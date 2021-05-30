@@ -11,7 +11,7 @@ export const Gallery = () => {
 			if (localStorage.getItem("homes") === null) setState({ homes: [] });
 			else setState({ homes: localStorage.getItem("homes") });
 		}
-		let endpoint = "http://localhost:3000/api/homes";
+		let endpoint = "https://isis3710parcial2smarthome.herokuapp.com/api/homes";
 		fetch(endpoint)
 			.then((res) => {
 				return res.json();

@@ -16,7 +16,7 @@ export const HomeDetail = () => {
 			else setState({ home: localStorage.getItem(`${id}`) });
 		}
 
-		let endpoint = `http://localhost:3000/api/homes/${id}`;
+		let endpoint = `https://isis3710parcial2smarthome.herokuapp.com/api/homes/${id}`;
 		fetch(endpoint)
 			.then((res) => {
 				return res.json();
