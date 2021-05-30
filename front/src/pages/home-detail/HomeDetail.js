@@ -4,6 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { useParams } from "react-router";
 import { RoomsGallery } from "../../components/roomsGallery/RoomsGallery";
 import { RoomDetail } from "../../components/roomDetail/RoomDetail";
+import { Stats } from "../../components/stats/Stats";
 
 export const HomeDetail = () => {
 	let { id } = useParams();
@@ -36,7 +37,7 @@ export const HomeDetail = () => {
 			<h1>
 				<FormattedMessage id="myrooms"></FormattedMessage>
 			</h1>
-			<div className="row">
+			<section className="row">
 				<RoomsGallery
 					rooms={state.home.rooms}
 					clickRoom={setCurrentRoom}
@@ -50,7 +51,13 @@ export const HomeDetail = () => {
 							: roomState.room
 					}
 				></RoomDetail>
-			</div>
+			</section>
+			<h1>
+				<FormattedMessage id="stats"></FormattedMessage>
+			</h1>
+			<section className="row" id="visualizationContainer">
+				<Stats rooms={state.home.rooms}></Stats>
+			</section>
 		</div>
 	);
 };

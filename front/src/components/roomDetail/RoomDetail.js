@@ -1,12 +1,11 @@
 import React from "react";
 import "./RoomDetail.scss";
 import { useIntl } from "react-intl";
-import { FormattedMessage } from "react-intl";
 
 export const RoomDetail = (props) => {
 	const intl = useIntl();
 	return (
-		<div className="Gallery col-lg-4 md-12 sm-12">
+		<div className="roomDetail col-lg-4 md-12 sm-12">
 			{props.room == null ? (
 				<h5>{intl.formatMessage({ id: "noRoomSelected" })}</h5>
 			) : (
@@ -24,9 +23,15 @@ export const RoomDetail = (props) => {
 							return (
 								<tr key={device.id}>
 									<th scope="row">{index + 1}</th>
-									<td>{device.id}</td>
+									<td>
+										{device.id ? device.id : intl.formatMessage({ id: "none" })}
+									</td>
 									<td>{device.name}</td>
-									<td>{device.desired.value}</td>
+									<td>
+										{typeof device.desired.value === typeof "String"
+											? device.desired.value
+											: JSON.stringify(device.desired.value)}
+									</td>
 								</tr>
 							);
 						})}

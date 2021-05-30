@@ -26,5 +26,7 @@ export default {
 		noRoomSelected: "No room selected",
 		device: "Device",
 		value: "Value",
+		none: "None",
+		powerusage: "Power usage (KwH) - Today",
 	},
 };

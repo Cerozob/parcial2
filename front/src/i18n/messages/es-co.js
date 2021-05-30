@@ -27,5 +27,7 @@ export default {
 		noRoomSelected: "No se ha seleccionado ninguna habitación",
 		device: "Dispositivo",
 		value: "Valor",
+		none: "Ninguno",
+		powerusage: "Uso de energía (KwH) - Hoy",
 	},
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./RoomsGallery.scss";
 import { RoomCard } from "../roomcard/RoomCard";
 import { FormattedMessage } from "react-intl";
