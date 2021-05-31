@@ -2,7 +2,7 @@
 
 Para correr la PWA hay que realizar los siguientes pasos:
 
-* El backend/API está desplegado en [Heroku](http://isis3710parcial2smarthome.herokuapp.com/)
+* El backend/API está desplegado en [Heroku](http://isis3710parcial2smarthome.herokuapp.com/) -> [API/HOMES](http://isis3710parcial2smarthome.herokuapp.com/api/homes)
 * A causa de lo anterior, no hay nececidad de un archivo .env ya que las variables de entorno se definieron en Heroku
 
 1. desde la consola navegar al directorio repositorio/front -> cd front
