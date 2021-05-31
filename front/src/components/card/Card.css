@@ -1,0 +1,79 @@
+.card-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 13rem;
+  min-height: 12rem;
+  padding: 0.7rem;
+  -webkit-box-shadow: 2px 2px #b6b6b6;
+          box-shadow: 2px 2px #b6b6b6;
+  margin-top: 0.625rem;
+}
+
+.card-home:not(:first-child) {
+  margin-left: 0.625rem;
+}
+
+.card-home-img-link {
+  text-align: center;
+}
+
+.card-home-img-top {
+  height: 5rem;
+  width: 5rem !important;
+}
+
+.card-home-img-top.loft {
+  width: 3rem !important;
+}
+
+.card-home-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 10px;
+}
+
+.card-home-body-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.card-home-body-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.card-home-body .card-text {
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=Card.css.map */

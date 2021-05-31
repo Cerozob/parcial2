@@ -31,7 +31,7 @@ export const Stats = (props) => {
 				return d.value;
 			});
 
-			var arc = d3
+			let arc = d3
 				.arc()
 				.innerRadius(0)
 				.outerRadius(Math.min(width, height) / 2 - 1);
@@ -54,7 +54,7 @@ export const Stats = (props) => {
 					.style("left", d3.pointer(d, d3.select(this))[0] + 30 + "px")
 					.style("top", d3.pointer(d, d3.select(this))[1] - 30 + "px");
 			};
-			var mouseleave = function (d) {
+			let mouseleave = function (d) {
 				tooltip.style("opacity", 0);
 				d3.select(this).style("stroke", "none").style("opacity", 1);
 			};

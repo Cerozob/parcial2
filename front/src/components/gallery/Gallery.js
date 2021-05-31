@@ -8,28 +8,35 @@ export const Gallery = () => {
 
 	useEffect(() => {
 		if (!navigator.onLine) {
-			if (localStorage.getItem("homes") === null) setState({ homes: [] });
-			else setState({ homes: localStorage.getItem("homes") });
+			if (localStorage.getItem("homes") == null) setState({ homes: [] });
+			else setState({ homes: JSON.parse(localStorage.getItem("homes")) });
+		} else {
+			let endpoint =
+				"https://isis3710parcial2smarthome.herokuapp.com/api/homes";
+			fetch(endpoint)
+				.then((res) => {
+					return res.json();
+				})
+				.then((phomes) => {
+					setState({ homes: phomes });
+					localStorage.setItem("homes", JSON.stringify(phomes));
+				});
 		}
-		let endpoint = "https://isis3710parcial2smarthome.herokuapp.com/api/homes";
-		fetch(endpoint)
-			.then((res) => {
-				return res.json();
-			})
-			.then((phomes) => {
-				setState({ homes: phomes });
-				localStorage.setItem("homes", phomes);
-			});
 	}, []);
 	return (
-		<div className="Gallery">
-			{state.homes == null ? (
-				<FormattedMessage id="noHomes"></FormattedMessage>
-			) : (
-				state.homes
-					.filter((home) => home.isActive)
-					.map((home) => <Card key={home.id} home={home}></Card>)
-			)}
+		<div className="container home">
+			<h1>
+				<FormattedMessage id="spaces"></FormattedMessage>
+			</h1>
+			<div className="Gallery">
+				{state.homes == null ? (
+					<FormattedMessage id="noHomes"></FormattedMessage>
+				) : (
+					state.homes
+						.filter((home) => home.isActive)
+						.map((home) => <Card key={home.id} home={home}></Card>)
+				)}
+			</div>
 		</div>
 	);
 };

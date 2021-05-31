@@ -28,5 +28,7 @@ export default {
 		value: "Value",
 		none: "None",
 		powerusage: "Power usage (KwH) - Today",
+		offline: "You are offline",
+		online: "You are back online",
 	},
 };

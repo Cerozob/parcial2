@@ -29,5 +29,7 @@ export default {
 		value: "Valor",
 		none: "Ninguno",
 		powerusage: "Uso de energía (KwH) - Hoy",
+		offline: "No hay conexión a internet",
+		online: "Conexión a internet restablecida",
 	},
 };

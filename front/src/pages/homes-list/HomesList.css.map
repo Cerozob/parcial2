@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACI,KADC,CACD,EAAE,CAAA;EACE,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "HomesList.scss"
+    ],
+    "names": [],
+    "file": "HomesList.css"
+}

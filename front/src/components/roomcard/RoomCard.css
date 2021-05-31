@@ -1,0 +1,26 @@
+.room-card-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 12rem;
+  min-height: 12rem;
+  padding: 0.7rem;
+  margin-top: 0.625rem;
+}
+
+.room-card-home:not(:first-child) {
+  margin-left: 0.625rem;
+}
+
+.room-card-home-img-link {
+  text-align: center;
+}
+
+.room-card-home-img-top {
+  height: 10rem;
+  width: 10rem !important;
+}
+/*# sourceMappingURL=RoomCard.css.map */

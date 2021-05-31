@@ -1,0 +1,10 @@
+h6 {
+  text-align: center;
+}
+
+.visualization {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=Stats.css.map */

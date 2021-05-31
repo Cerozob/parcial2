@@ -4,8 +4,9 @@ import { Navbar } from "../components/nav/Navbar";
 import { IntlProvider } from "react-intl";
 import { LOCALES } from "../i18n/locales";
 import messages from "../i18n/messages";
-import { HomesList } from "../pages/homes-list/HomesList";
+import { Gallery } from "../components/gallery/Gallery";
 import { HomeDetail } from "../pages/home-detail/HomeDetail";
+import { OfflineTooltip } from "../components/offlineTooltip/OfflineTooltip";
 
 export const AppRouter = () => {
 	const [language, setLanguage] = useState(LOCALES.ENGLISH);
@@ -13,13 +14,14 @@ export const AppRouter = () => {
 	return (
 		<IntlProvider locale={language} messages={messages[language]}>
 			<Router>
+				<OfflineTooltip></OfflineTooltip>
 				<Navbar setLanguage={setLanguage}></Navbar>
 				<Switch>
 					<Route exact path="/">
-						<HomesList />
+						<Gallery />
 					</Route>
 					<Route exact path="/homes">
-						<HomesList />
+						<Gallery />
 					</Route>
 					<Route exact path="/homes/:id">
 						<HomeDetail></HomeDetail>
